@@ -35,4 +35,35 @@ public class CalculatorTest {
         Assert.assertEquals("Substraction fail", 1, actual);
     }
 
+    @Test
+    public void testMul() {
+        int a = 4;
+        int b = 2;
+        Calculator calc = new Calculator();
+        int actual = calc.mul(a, b);
+
+        Assert.assertEquals("Mul fail", 8, actual);
+    }
+
+    @Test
+    public void testDiv() {
+        int a = 4;
+        int b = 2;
+        Calculator calc = new Calculator();
+        int actual = calc.div(a, b);
+
+        Assert.assertEquals("Div fail", 2, actual);
+    }
+
+    @Test
+    public void testIsPair() {
+        Calculator calc = new Calculator();
+
+        boolean actual = calc.isPair(1);
+        Assert.assertFalse(actual);
+
+        actual = calc.isPair(2);
+        Assert.assertTrue(actual);
+    }
+
 }
